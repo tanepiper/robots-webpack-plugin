@@ -13,7 +13,7 @@ const OUTPUT_PATH = 'public';
 describe('Plugin', function() {
 
   beforeEach(function(done) {
-    rm(OUTPUT_PATH, done);
+    rm(Path.join(__dirname, OUTPUT_PATH), done);
   });
 
   it('generates a default robots.txt', function(done) {
