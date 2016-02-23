@@ -9,6 +9,10 @@ are not exposed to search engines such as Google.
 
 This plugin allows you to include this in your environment settings to generate a file.
 
+### Install the plugin
+
+`npm install --save-dev @tanepiper/webpack-robotstxt`
+
 ### How to I use this plugin?
 
 In your webpack config:
