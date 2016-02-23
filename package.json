@@ -1,0 +1,28 @@
+{
+  "name": "@tanepiper/webpack-robotstxt",
+  "version": "0.1.0",
+  "description": "A plugin to output a robots.txt file with options per environment",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanepiper/webpack-robotstxt.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "Tane Piper <piper.tane@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tanepiper/webpack-robotstxt/issues"
+  },
+  "homepage": "https://github.com/tanepiper/webpack-robotstxt#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "rimraf": "^2.5.2",
+    "webpack": "^1.12.14"
+  }
+}
