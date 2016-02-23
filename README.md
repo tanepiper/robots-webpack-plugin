@@ -26,9 +26,7 @@ const webpackConfig = {
     path: '/public',
     filename: 'index.js'
   },
-  plugins: [new WebpackRobots({
-    path: '/public'
-  })]
+  plugins: [new WebpackRobots()]
 };
 ```
 
@@ -37,7 +35,6 @@ Each one is an object with a `name:string`, `disallow:array` and `allow:array` i
 
 ```
 plugins: [new WebpackRobots({
-  path: '/public',
   userAgents: [{
     name: '*',
     disallow: ['/', '/cgi-bin'],

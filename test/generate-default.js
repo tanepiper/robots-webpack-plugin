@@ -24,12 +24,10 @@ Allow: /`;
     const webpackConfig = {
       entry: Path.join(__dirname, 'fixtures/index.js'),
       output: {
-        path: Path.join(__dirname, OUTPUT_PATH, 'js'),
+        path: Path.join(__dirname, OUTPUT_PATH),
         filename: 'index.js'
       },
-      plugins: [new Plugin({
-        path: Path.join(__dirname, OUTPUT_PATH)
-      })]
+      plugins: [new Plugin()]
     };
 
     webpack(webpackConfig, function(error, stats) {
@@ -52,11 +50,10 @@ Disallow: /`;
     const webpackConfig = {
       entry: Path.join(__dirname, 'fixtures/index.js'),
       output: {
-        path: Path.join(__dirname, OUTPUT_PATH, 'js'),
+        path: Path.join(__dirname, OUTPUT_PATH),
         filename: 'index.js'
       },
       plugins: [new Plugin({
-        path: Path.join(__dirname, OUTPUT_PATH),
         userAgents: [{
           name: '*',
           disallow: ['/']
@@ -87,11 +84,10 @@ Allow: /`;
     const webpackConfig = {
       entry: Path.join(__dirname, 'fixtures/index.js'),
       output: {
-        path: Path.join(__dirname, OUTPUT_PATH, 'js'),
+        path: Path.join(__dirname, OUTPUT_PATH),
         filename: 'index.js'
       },
       plugins: [new Plugin({
-        path: Path.join(__dirname, OUTPUT_PATH),
         userAgents: [{
           name: '*',
           disallow: ['/']
