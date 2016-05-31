@@ -33,8 +33,11 @@ const webpackConfig = {
 The default output is an `Allow` directive for all user agents.  To configure, pass in an array to userAgents option.
 Each one is an object with a `name:string`, `disallow:array` and `allow:array` in any combination.
 
+There is also the sitemap options which will output a Sitemap directive at the end. Just provide a full url to the sitemap file.
+
 ```
 plugins: [new WebpackRobots({
+  sitemap: 'https://example.com/sitemap.xml',
   userAgents: [{
     name: '*',
     disallow: ['/', '/cgi-bin'],
