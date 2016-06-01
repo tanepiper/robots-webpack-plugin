@@ -110,5 +110,34 @@ Allow: /`;
     });
   });
 
+  it('generates a robots.txt with a sitemap', function(done) {
+    const expected = `User-agent: *
+Allow: /
+
+Sitemap: https://example.com/sitemap.xml`;
+
+    const webpackConfig = {
+      entry: Path.join(__dirname, 'fixtures/index.js'),
+      output: {
+        path: Path.join(__dirname, OUTPUT_PATH),
+        filename: 'index.js'
+      },
+      plugins: [new Plugin({
+        sitemap: 'https://example.com/sitemap.xml',
+      })]
+    };
+
+    webpack(webpackConfig, function(error, stats) {
+      expect(error).to.be.null;
+      expect(stats.hasErrors()).to.be.false;
+
+      fs.readFile(Path.join(__dirname, OUTPUT_PATH, 'robots.txt'), {encoding: 'utf8'}, function(fsError, data) {
+        expect(fsError).to.be.null;
+        expect(data).to.equal(expected);
+        done();
+      });
+    });
+
+  });
 
 });
