@@ -1,6 +1,6 @@
 {
   "name": "@tanepiper/robots-webpack-plugin",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "A plugin to output a robots.txt file with options per environment",
   "main": "lib/index.js",
   "scripts": {
@@ -14,6 +14,10 @@
     "webpack"
   ],
   "author": "Tane Piper <piper.tane@gmail.com>",
+  "contributors": [{
+    "name": "Hugo Dozois",
+    "email": "hugo@letsroundup.com"
+  }],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/tanepiper/robots-webpack-plugin/issues"
@@ -21,8 +25,8 @@
   "homepage": "https://github.com/tanepiper/robots-webpack-plugin#readme",
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^2.4.5",
+    "mocha": "^2.5.3",
     "rimraf": "^2.5.2",
-    "webpack": "^1.12.14"
+    "webpack": "^1.13.1"
   }
 }
