@@ -11,14 +11,14 @@ This plugin allows you to include this in your environment settings to generate 
 
 ### Install the plugin
 
-`npm install --save-dev @tanepiper/webpack-robotstxt`
+`npm install --save-dev @tanepiper/robots-webpack-plugin`
 
 ### How to I use this plugin?
 
 In your webpack config:
 
 ```
-const WebpackRobots = require('@tanepiper/webpack-robotstxt');
+const RobotsPlugin = require('@tanepiper/robots-webpack-plugin');
 
 const webpackConfig = {
   entry: 'src/index.js',
@@ -26,7 +26,7 @@ const webpackConfig = {
     path: '/public',
     filename: 'index.js'
   },
-  plugins: [new WebpackRobots()]
+  plugins: [new RobotsPlugin()]
 };
 ```
 
@@ -36,7 +36,7 @@ Each one is an object with a `name:string`, `disallow:array` and `allow:array` i
 There is also the sitemap options which will output a Sitemap directive at the end. Just provide a full url to the sitemap file.
 
 ```
-plugins: [new WebpackRobots({
+plugins: [new RobotsPlugin({
   sitemap: 'https://example.com/sitemap.xml',
   userAgents: [{
     name: '*',
